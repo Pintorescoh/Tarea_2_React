@@ -26,8 +26,7 @@ Estructura mínima
 
 Uso
 - Asegúrate de que `src/index.js` o `src/main.jsx` renderice el componente `App`.
-- Abrir el navegador en `http://localhost:3000` (CRA) o la URL que devuelva Vite.
+- Abrir el navegador en `http://localhost:5173/`.
 
 Notas
 - El componente incluye manejo de carga, error y limpieza con `AbortController`.
-- Para la entrega, incluye una captura de pantalla de la tabla renderizada en el navegador.
