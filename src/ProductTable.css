@@ -1,0 +1,61 @@
+:root{
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --line: #e6e8eb;
+  --accent: #2f5fe0;
+}
+
+.table-container{
+  width:100%;
+  overflow-x:auto;
+  background:var(--bg);
+  padding:6px 0;
+}
+
+.product-table{
+  width:100%;
+  border-collapse:collapse;
+  font-family: inherit;
+  font-size:14px;
+}
+
+.table-caption{
+  text-align:left;
+  font-weight:600;
+  margin-bottom:8px;
+  caption-side:top;
+}
+
+.product-table thead th{
+  text-align:left;
+  padding:10px 12px;
+  border-bottom:2px solid var(--line);
+  color:var(--muted);
+  font-weight:600;
+}
+
+.product-table tbody td{
+  padding:10px 12px;
+  border-bottom:1px solid var(--line);
+}
+
+.status{ padding:12px; color:var(--muted); }
+.status.error{ color:#b91c1c; }
+
+/* Responsive: convert rows to blocks on small screens, show data-label before value */
+@media (max-width: 600px){
+  .product-table thead{ display:none; }
+  .product-table, .product-table tbody, .product-table tr, .product-table td{
+    display:block;
+    width:100%;
+  }
+  .product-table tr{ margin:0 0 12px 0; padding:10px; border:1px solid var(--line); border-radius:8px; }
+  .product-table tbody td{ padding:8px 6px; border-bottom:none; }
+  .product-table tbody td::before{
+    content: attr(data-label) ": ";
+    font-weight:600;
+    display:inline-block;
+    width:110px;
+    color:var(--muted);
+  }
+}
